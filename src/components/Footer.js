@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"
-//import { NavLink } from "react-router-dom"
+//import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Footer(){
-    // const activeStyle = {
-    //   color: black
-    // }
+    const activeStyle = {
+      color: 'black'
+    }
 
     return(
       <footer className="container bg-light footer">
@@ -12,9 +12,9 @@ export default function Footer(){
         <section className="footer-section text-left">
           <h5>Информация</h5>
             <ul className="flex-column">
-              <li className="nav-item"><Link to="/about"><button className="btn">О магазине</button></Link></li>
-              <li className="nav-item"><Link to="/catalog"><button className="btn">Каталог</button></Link></li>
-              <li className="nav-item"><Link to="/contacts"><button className="btn">Контакты</button></Link></li>
+              <li className="nav-item"><NavLink to="/about" activeStyle={activeStyle}>О магазине</NavLink></li>
+              <li className="nav-item"><NavLink to="/catalog" activeStyle={activeStyle}>Каталог</NavLink></li>
+              <li className="nav-item"><NavLink to="/contacts" activeStyle={activeStyle}>Контакты</NavLink></li>
             </ul>
         </section>
 
